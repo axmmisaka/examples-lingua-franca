@@ -1,22 +1,12 @@
 {
     "image": "mcr.microsoft.com/devcontainers/universal:2",
     "hostRequirements": {
-      "cpus": 1
+      "cpus": 4
     },
     "waitFor": "postCreateCommand",
     "updateContentCommand": "",
-    "postCreateCommand": [
-        "sudo apt update &&",
-        // Install dependencies; JDK 17, gcc, g++, cmake, setuptools are present in the image
-        "npm install -g typescript &&",
-        "sudo apt install rustc &&",
-        // Shallow clone LF repository
-        "git clone https://github.com/lf-lang/lingua-franca.git --branch master --depth 1 &&",
-        // Build LF
-        "cd lingua-franca && ./gradlew buildAll &&",
-        // Clone examples
-        "cd .. && git clone https://github.com/lf-lang/examples-lingua-franca.git examples --branch main"
-    ],
+    "postCreateCommand": "bash ./init.bash",
+    "workspaceFolder": "/workspaces/examples-lingua-franca",
     "containerEnv": {
         // Unsure if this is a good idea, as other people might fork this and change name
         "LF_PATH": "${workspaceFolder}/lingua-franca",
