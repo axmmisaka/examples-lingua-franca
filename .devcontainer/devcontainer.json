@@ -10,7 +10,7 @@
     "remoteEnv": {
         // Unsure if this is a good idea, as other people might fork this and change name
         "LF_PATH": "${containerWorkspaceFolder}/lingua-franca",
-        "PATH": "${containerEnv:PATH}:$LF_PATH/bin"
+        "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/lingua-franca/bin"
     },
     "customizations": {
       "codespaces": {
