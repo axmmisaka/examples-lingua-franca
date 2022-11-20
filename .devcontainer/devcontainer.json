@@ -1,7 +1,7 @@
 {
     "image": "mcr.microsoft.com/devcontainers/universal:2",
     "hostRequirements": {
-      "cpus": 4
+      "cpus": 1
     },
     "waitFor": "postCreateCommand",
     "updateContentCommand": "",
@@ -9,8 +9,8 @@
     "workspaceFolder": "/workspaces/examples-lingua-franca",
     "containerEnv": {
         // Unsure if this is a good idea, as other people might fork this and change name
-        "LF_PATH": "${workspaceFolder}/lingua-franca",
-        "PATH": "${localEnv:PATH}:${workspaceFolder}/lingua-franca/bin"
+        "LF_PATH": "${containerWorkspaceFolder}/lingua-franca",
+        "PATH": "${containerEnv:PATH}:$LF_PATH/bin"
     },
     "customizations": {
       "codespaces": {
