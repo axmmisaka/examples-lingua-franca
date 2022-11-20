@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt update
 npm install -g typescript
-sudo apt install rustc
+sudo apt install --assume-yes rustc
 git clone https://github.com/lf-lang/lingua-franca.git --branch master --depth 1
 cd lingua-franca
 ./gradlew buildAll
