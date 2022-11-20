@@ -7,7 +7,7 @@
     "updateContentCommand": "",
     "postCreateCommand": "bash ./init.bash",
     "workspaceFolder": "/workspaces/examples-lingua-franca",
-    "containerEnv": {
+    "remoteEnv": {
         // Unsure if this is a good idea, as other people might fork this and change name
         "LF_PATH": "${containerWorkspaceFolder}/lingua-franca",
         "PATH": "${containerEnv:PATH}:$LF_PATH/bin"
