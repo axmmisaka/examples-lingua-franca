@@ -11,7 +11,8 @@
     "waitFor": "postCreateCommand",
     "updateContentCommand": "",
     "postCreateCommand": {
-      "setup-lf": "bash -i ./utils/scripts/setup-user-env.bash && bash ./utils/scripts/setup-lf.bash nightly"
+      "setup-lf": "bash ./utils/scripts/setup-lf.bash nightly",
+      "setup-user-env": "bash -i ./utils/scripts/setup-user-env.bash"
     }, 
     "workspaceFolder": "/workspaces/examples-lingua-franca",
     "remoteEnv": {
