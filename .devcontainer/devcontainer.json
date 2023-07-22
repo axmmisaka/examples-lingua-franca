@@ -8,12 +8,12 @@
       "cpus": 1
     },
     // Uncomment this line if GitHub displays no enough space
-    "waitFor": "postCreateCommand",
+    "waitFor": "postStartCommand",
     "updateContentCommand": "",
-    "postCreateCommand": {
-      "setup-lf": "bash ./utils/scripts/setup-lf.bash nightly",
-      "setup-user-env": "bash -i ./utils/scripts/setup-user-env.bash"
-    }, 
+    "postStartCommand": {
+        "setup-user-env": "bash -i ./utils/scripts/setup-user-env.bash >> /workspaces/.codespaces/.persistedshare/stdout-env.log 2>>/workspaces/.codespaces/.persistedshare/stderr-env.log",
+        "setup-lf": "bash ./utils/scripts/setup-lf.bash nightly >> /workspaces/.codespaces/.persistedshare/stdout-lf.log 2>>/workspaces/.codespaces/.persistedshare/stderr-lf.log"
+    },
     "workspaceFolder": "/workspaces/examples-lingua-franca",
     "remoteEnv": {
         // Unsure if this is a good idea, as other people might fork this and change name
