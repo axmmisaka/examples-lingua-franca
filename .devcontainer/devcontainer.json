@@ -11,7 +11,7 @@
     "waitFor": "postCreateCommand",
     "updateContentCommand": "",
     "onCreateCommand": {
-        "setup": "sudo mkdir -p /workspaces/.codespaces/.persistedshare/logs && sudo chown -R `whoami` /workspaces/.codespaces/.persistedshare/logs",
+        "setup": "sudo mkdir -p /workspaces/.codespaces/.persistedshare/logs && sudo chown -R vscode /workspaces/.codespaces/.persistedshare/logs",
         "whoami": "whoami"
     },
     "postStartCommand": {
