@@ -18,6 +18,10 @@ tasks:
     command: |
       echo 'lingua-franca/**' >> .gitignore
       exit
+  - name: Open demo
+    command: >
+      gp open ./examples/C/src/RockPaperScissors.lf
+      exit
 ## Dirty hack, https://github.com/gitpod-io/gitpod/issues/9275#issuecomment-1098275529
   - name: Setup env
     command: >
