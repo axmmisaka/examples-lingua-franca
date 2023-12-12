@@ -19,7 +19,7 @@ tasks:
       echo 'lingua-franca/**' >> .gitignore
       exit
   - name: Open demo
-    command: >
+    command: |
       gp sync-await setup-lf
       gp sync-await setup-user-env
       gp open ./examples/C/src/RockPaperScissors.lf
