@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - 'releases/*'
-
+ 
 jobs:
   find-latest-release:
     uses: lf-lang/lingua-franca/.github/workflows/latest-release.yml@master
